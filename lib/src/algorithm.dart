@@ -17,7 +17,13 @@ abstract class Algorithm {
   /// Creates the Algorithm based on the given [hash] and using the [hash] encoded params.
   static Algorithm decode(String hash) {
     final parts = hash.split('\$');
+
     final algoFactory = _algorithms[parts[1]];
+
+    if (algoFactory == null) {
+      throw new ArgumentError('Unknown algorithm: ${parts[1]}');
+    }
+    
     final algorithm = algoFactory(parts[2].split(','), parts[3]);
 
     return algorithm;

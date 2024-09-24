@@ -1,13 +1,13 @@
+publish_to: 'none'
 name: password
 version: 1.0.0
 description: A set of high-level APIs over PointyCastle to hash and verify passwords securely.
-author: leocavalcante <lc@leocavalcante.com>
 homepage: https://github.com/leocavalcante/password-dart
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
-  pointycastle: ^1.0.0
+  pointycastle: ^3.9.1
 
 dev_dependencies:
   test: ^1.5.1+1
